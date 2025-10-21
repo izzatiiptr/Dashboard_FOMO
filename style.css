@@ -1,0 +1,219 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+:root {
+    --color-salmon: #FA8072;
+    --color-skyblue: #87CEEB;
+    --color-mint: #7FC8A9;
+    --color-purple: #7E5A9B;
+    --color-gradient-1: #C94A44;
+    --color-gradient-2: #E96A5F;
+    --color-gradient-3: #FF8C75;
+    --color-gradient-4: #FFB5A7;
+    --color-gradient-5: #FFE0DC;
+}
+
+body,
+.stApp {
+    background-color: var(--color-gradient-5);
+    font-family: "Poppins", sans-serif;
+}
+
+.main,
+.block-container {
+    background-color: #ffffff;
+    border-radius: 24px;
+    padding: 2.5rem 3rem;
+    box-shadow: 0 12px 32px rgba(201, 74, 68, 0.08);
+    max-width: 100%;
+    width: 100%;
+    margin: 1rem auto;
+}
+
+section[data-testid="stSidebar"] {
+    background-color: var(--color-gradient-1);
+    color: #ffffff;
+}
+
+section[data-testid="stSidebar"] * {
+    color: #ffffff !important;
+}
+
+section[data-testid="stSidebar"] button {
+    background-color: rgba(255, 255, 255, 0.18);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    color: #ffffff;
+    border-radius: 12px;
+    font-weight: 600;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+section[data-testid="stSidebar"] button:hover {
+    background-color: rgba(255, 255, 255, 0.28);
+}
+
+section[data-testid="stSidebar"] button:disabled {
+    background-color: var(--color-gradient-3);
+    color: #ffffff !important;
+    border-color: var(--color-gradient-3);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.22);
+    font-weight: 700;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    color: #343a40;
+    font-weight: 700;
+    font-family: "Poppins", sans-serif;
+}
+
+.stMarkdown,
+.stMarkdown p,
+.stMarkdown ul,
+.stMarkdown li {
+    font-family: "Poppins", sans-serif;
+}
+
+.stTabs [role="tab"] {
+    flex: 1 1 auto;
+    text-align: center;
+    background-color: rgba(250, 128, 114, 0.15);
+    border-radius: 12px 12px 0 0;
+    color: var(--color-salmon);
+    padding: 0.9rem 1rem;
+    margin-right: 0.5rem;
+    font-weight: 600;
+    border: none;
+}
+
+.stTabs [role="tab"][aria-selected="true"] {
+    background-color: var(--color-gradient-1);
+    color: #ffffff;
+}
+
+.stTabs [role="tablist"] {
+    display: flex;
+    width: 100%;
+    margin-bottom: 0;
+    padding: 0.35rem;
+    background-color: rgba(250, 128, 114, 0.12);
+    border-radius: 14px 14px 0 0;
+    border: 1px solid rgba(201, 74, 68, 0.2);
+}
+
+.stTabs [role="tab"]:last-child {
+    margin-right: 0;
+}
+
+.stTabs div[role="tabpanel"] {
+    border: 1px solid rgba(201, 74, 68, 0.2);
+    border-top: none;
+    border-radius: 0 0 14px 14px;
+    padding: 1.5rem;
+    background-color: rgba(250, 128, 114, 0.03);
+    margin-top: -0.1rem;
+}
+
+.banner {
+    background: linear-gradient(135deg, var(--color-gradient-1), var(--color-gradient-3));
+    color: #ffffff;
+    border-radius: 18px;
+    padding: 2.4rem 3rem;
+    margin: 0 auto 2rem auto;
+    text-align: center;
+    max-width: 1000px;
+    box-shadow: 0 25px 45px rgba(201, 74, 68, 0.28);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.banner h2 {
+    margin-bottom: 0.35rem;
+    font-size: 2.05rem;
+    font-weight: 700;
+}
+
+.banner p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.85) !important;
+    font-size: 1.08rem;
+}
+
+.card {
+    background-color: rgba(250, 128, 114, 0.03);
+    border-radius: 16px;
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 12px 26px rgba(201, 74, 68, 0.12);
+    border: 1px solid rgba(201, 74, 68, 0.2);
+    display: block;
+}
+
+.stMetric {
+    background-color: rgba(250, 128, 114, 0.03);
+    color: #343a40;
+    border-radius: 14px;
+    padding: 1.25rem;
+    border: 1px solid rgba(201, 74, 68, 0.18);
+    box-shadow: 0 8px 20px rgba(201, 74, 68, 0.1);
+    margin-bottom: 0.75rem;
+}
+
+.stAlert {
+    border-radius: 12px;
+    border-left: 6px solid var(--color-mint);
+    background-color: rgba(135, 206, 235, 0.12);
+    color: #2a4a5b;
+    font-family: "Poppins", sans-serif;
+}
+
+.stAlert[data-baseweb="notification"][aria-live="assertive"] {
+    border-left-color: var(--color-salmon);
+    background-color: rgba(250, 128, 114, 0.12);
+    color: #6e2a2f;
+}
+
+.stMarkdown p {
+    color: #4f4f4f;
+    line-height: 1.6;
+}
+
+.stCaption {
+    color: #6c757d;
+}
+
+div[data-testid="stDataFrame"] table {
+    border-radius: 12px;
+    border: 1px solid rgba(135, 206, 235, 0.3);
+}
+
+div[data-testid="stDataFrame"] table thead {
+    background-color: var(--color-skyblue);
+    color: #ffffff;
+}
+
+div[data-testid="stDataFrame"] table tbody tr:nth-child(even) {
+    background-color: rgba(135, 206, 235, 0.12);
+}
+
+div[data-testid="stDataFrame"] table tbody tr:hover {
+    background-color: rgba(250, 128, 114, 0.18);
+}
+
+.section-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.25rem;
+}
+
+.section-grid > .card {
+    margin-bottom: 0;
+}
+
+.metrics-card {
+    padding: 1.75rem 2rem;
+}
+
+.metrics-card .stMetric {
+    margin-bottom: 0;
+}
